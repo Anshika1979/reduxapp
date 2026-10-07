@@ -1,24 +1,17 @@
-import logo from './logo.svg';
+
+//Redux works by maintaining a centralized, global state container called a store that serves as the single source of truth for your entire application. Instead of passing state down through multiple layers of components (prop drilling), any component in the application can directly read from or trigger updates to this central store.
 import './App.css';
+import Navbar from './Navbar';
+import Shop from './Shop';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <div className="container">
+        <Shop />
+      </div>
+      </>
   );
 }
 
